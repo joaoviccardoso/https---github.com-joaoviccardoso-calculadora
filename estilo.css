@@ -1,0 +1,28 @@
+:root {
+    --cor-bordar: #000;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   margin-top: 10rem;
+}
+
+/*container principal da calculadora*/
+
+.container__calculadora{
+    border: 2px solid var(--cor-bordar);
+    border-radius: 5px;
+
+    padding: 0.5rem;
+}
+
+/*container do titulo e do logo*/
+
+.container__titulo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: .5rem;
+}

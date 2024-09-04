@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilo.css">
 </head>
@@ -11,13 +14,42 @@
     <div class="container__calculadora">
         <div class="container__titulo">
             <img src="./img/calculator_419963.png" alt="imagem de uma calculadora" width="40">
-            <h1 class="titulo">Calculadoras</h1>
+            <h1 class="titulo">Calculadora</h1>
         </div>
+        <hr>
         <div class="container__resuldado">
-            <input type="number">
+           <h2 class="calculo">0</h2>
         </div>
+        <hr>
         <div class="container__teclas-numeros">
             <ul class="container__botao">
+                <li class="lista__botao">
+                    <button class="btns" id="botao-9">9</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-8">8</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-7">7</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-6">6</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-5">5</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-4">4</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-3">3</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-2">2</button>
+                </li>
+                <li class="lista__botao">
+                    <button class="btns" id="botao-1">1</button>
+                </li>
                 <li class="lista__botao">
                     <button class="btns" id="botao-=">=</button>
                 </li>
@@ -27,40 +59,15 @@
                 <li class="lista__botao">
                     <button class="btns" id="botao-,">,</button>
                 </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-1">1</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-2">2</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-3">3</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-4">4</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-5">5</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-6">6</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-7">7</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-8">8</button>
-                </li>
-                <li class="lista__botao">
-                    <button class="btns" id="botao-9">9</button>
-                </li>
             </ul>
-
+             
             <ul class="lista__teclas-maismenos">
-                <li class="lista__botao"><button id="botao-+">+</button></li>
-                <li class="lista__botao"><button id="botao--">-</button></li>
-                <li class="lista__botao"><button id="botao-*">x</button></li>
-                <li class="lista__botao"><button id="botao-/">/</button></li>
+                <li class="lista__botao"><button class="btns" id="botao-%">%</button></li>
+                <li class="lista__botao"><button class="btns" id="botao-ce">CE</button></li>
+                <li class="lista__botao"><button class="btns" id="botao-+">+</button></li>
+                <li class="lista__botao"><button class="btns" id="botao--">-</button></li>
+                <li class="lista__botao"><button class="btns" id="botao-*">x</button></li>
+                <li class="lista__botao"><button class="btns" id="botao-/">/</button></li>
             </ul>
         </div>
     </div>    

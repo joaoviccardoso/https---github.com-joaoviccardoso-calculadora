@@ -1,20 +1,29 @@
 :root {
+    --cor-fundo-calculadora:#f1f1f1;
     --cor-bordar: #000;
+    --cor-btn-hover:#ff1a1a;
+    --cor-beckground:#333333;
 }
 
 body{
    display: flex;
    justify-content: center;
+   font-size: 16px;
+   font-family: "Roboto", sans-serif;
+   background-color: var(--cor-beckground);
    margin-top: 10rem;
 }
 
 /*container principal da calculadora*/
 
 .container__calculadora{
-    border: 2px solid var(--cor-bordar);
+    border: 3px solid var(--cor-bordar);
     border-radius: 5px;
 
     padding: 0.5rem;
+    width: 300px;
+
+    background-color: var(--cor-fundo-calculadora);
 }
 
 /*container do titulo e do logo*/
@@ -25,4 +34,77 @@ body{
     gap: 0.5rem;
 
     padding: .5rem;
+}
+
+.titulo{
+    font-size: 2rem;
+}
+
+/*Container resuldado do calculo*/
+
+.container__resuldado{
+    display: flex;
+    justify-content: end;
+    height: 40px;
+}
+
+.calculo{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+/*Container botaos*/
+
+.container__teclas-numeros{
+    display: flex;
+}
+
+.container__botao{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 8px;
+    row-gap: 8px;
+
+    margin: 1.2rem 0 1.2rem 0;
+    width: 350px;
+}
+
+.lista__teclas-maismenos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 8px;
+    column-gap: 3px;
+    margin: auto;
+}
+
+.lista__botao{   
+    height: 32px;
+}
+
+.btns{
+    width: 3rem;
+    height: 32px;
+
+    border: 1px solid var(--cor-bordar);
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px var(--cor-bordar);
+
+    background-color: var(--cor-bordar);
+    color: var(--cor-fundo-calculadora);
+
+    font-size: 1.3rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.btns:hover{
+    box-shadow: 1px 1px 4px var(--cor-btn-hover);
+}
+
+#botao-ce{
+    background-color: var(--cor-btn-hover);
 }

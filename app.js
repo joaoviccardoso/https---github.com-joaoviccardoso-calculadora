@@ -12,17 +12,12 @@ btnsNumeros.forEach(btn =>{
     btn.addEventListener('click', () =>{
         const idDoBtn = btn.getAttribute('id');
         const numeroDoCalculo = parseInt(idDoBtn.split('-')[1]);
-        containerResuldado.innerHTML +=  ` <h2 class="calculo">${numeroDoCalculo}</h2>`
-        
-        if (n1 && n2){
-            alert("escolha qual calculo vc quer fazer");
-            return
-        }
+        containerResuldado.innerHTML +=  `<h2 class="calculo">${numeroDoCalculo}</h2>`
 
-        if(!n1){
-            n1 = numeroDoCalculo
+        if(!calculoSerFeito){
+            n1 += numeroDoCalculo
         } else {
-            n2 = numeroDoCalculo
+            n2 += numeroDoCalculo
         }
     })
 
@@ -30,9 +25,13 @@ btnsNumeros.forEach(btn =>{
 
 btnsCalculo.forEach(btn =>{
     btn.addEventListener('click', () =>{
-
+      const idDobtnCalcular = btn.getAttribute('id');
+      const simboloDoCalculo = idDobtnCalcular.split('-')[1];
+      containerResuldado.innerHTML +=  `<h2 class="calculo">${simboloDoCalculo}</h2>`
     })
 })
+
+
 
 btnLimpar.onclick = () =>{
     containerResuldado.innerHTML = `<h2 class="calculo"></h2>`

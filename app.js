@@ -12,17 +12,17 @@ let calculoSerFeito = "";
 
 btnsNumeros.forEach(btn =>{
     btn.addEventListener('click', () =>{
+    
         const idDoBtn = btn.getAttribute('id');
-        const numeroDoCalculo = parseInt(idDoBtn.split('-')[1]);
+        const numeroDoCalculo = idDoBtn.split('-')[1];
         containerResuldado.innerHTML +=  `<h2 class="calculo">${numeroDoCalculo}</h2>`
-
+        
         if(!calculoSerFeito){
             n1 += numeroDoCalculo
         } else {
             n2 += numeroDoCalculo
         }
     })
-
 })
 
 btnsCalculo.forEach(btn =>{
@@ -42,20 +42,25 @@ btnCalcular.addEventListener('click', () =>{
     
     switch (calculoSerFeito){
         case "+": 
-            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} + ${n2}=${numeroDaSoma1+numeroDaSoma2}</h2>`;
+            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} + ${n2} = ${(numeroDaSoma1+numeroDaSoma2).toFixed(1)}</h2>`;
             break;
         case "-":
-            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} - ${n2}=${numeroDaSoma1-numeroDaSoma2}</h2>`;
+            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} - ${n2} = ${(numeroDaSoma1-numeroDaSoma2).toFixed(1)}</h2>`;
             break;
         case "*":
-            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} x ${n2}=${numeroDaSoma1*numeroDaSoma2}</h2>`;
+            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} x ${n2} = ${(numeroDaSoma1*numeroDaSoma2).toFixed(1)}</h2>`;
             break;
         case "/":
-            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} / ${n2}=${numeroDaSoma1/numeroDaSoma2}</h2>`;
+            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} / ${n2} = ${(numeroDaSoma1/numeroDaSoma2).toFixed(1)}</h2>`;
             break;
+        case "%":
+            containerResuldado.innerHTML =  `<h2 class="calculo">${n1} % ${n2} = ${((n2/100)*n1).toFixed(1)}</h2>`;
+            break;    
         default:
             containerResuldado.innerHTML = `<h2 class="calculo">Erro</h2>`
     }
+
+    
 })
 
 btnLimpar.onclick = () =>{

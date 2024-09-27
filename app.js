@@ -35,6 +35,11 @@ btnsCalculo.forEach(btn =>{
 })
 
 btnCalcular.addEventListener('click', () =>{
+    if(!n1 || !n2){
+        alert("Coloque um valor para o calculo")
+        return
+    }
+    
     numeroDaSoma1 = parseFloat(n1);
     numeroDaSoma2 = parseFloat(n2);
     console.log(n1, n2, calculoSerFeito)
